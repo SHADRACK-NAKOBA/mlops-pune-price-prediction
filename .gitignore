@@ -1,47 +1,77 @@
-# ── Python ─────────────────────────────────────────────────────────────────
+# ── Python ───────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
 .pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
 
-# ── Virtual environments ──────────────────────────────────────────────────
+# ── Virtual environments ──────────────────────────────────────────────────────
 .venv/
 venv/
 env/
 ENV/
 
-# ── IDE / editor ──────────────────────────────────────────────────────────
+# ── IDE / editor ──────────────────────────────────────────────────────────────
 .vscode/
 .idea/
 *.swp
-.DS_Store
+*.swo
+*~
 
-# ── Secrets ────────────────────────────────────────────────────────────────
+# ── OS files ──────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Secrets & credentials ─────────────────────────────────────────────────────
 .env
 .env.local
+.env.*
 *.pem
 *.key
+secrets.yaml
+credentials.json
 
-# ── MLflow local store ────────────────────────────────────────────────────
+# ── Raw & intermediate data (proprietary / DVC-tracked) ──────────────────────
+# The raw Excel file is proprietary — never commit it
+Pune Real Estate Data.xlsx
+# DVC pipeline intermediate outputs — tracked by DVC, not Git
+data_cleaned.csv
+model_features.csv
+model_target.npy
+
+# ── NLTK downloaded corpora ───────────────────────────────────────────────────
+# Downloaded automatically at runtime; no need to commit
+nltk_data/
+
+# ── MLflow local store ────────────────────────────────────────────────────────
 mlruns/
 mlflow.db
 mlflow.db-journal
 mlartifacts/
 
-# ── DVC ────────────────────────────────────────────────────────────────────
-# Never commit the DVC cache or the local-folder remote
-.dvc/cache
-.dvc/tmp
+# ── DVC ───────────────────────────────────────────────────────────────────────
+# Never commit the DVC cache, tmp files, or local remote config
+.dvc/cache/
+.dvc/tmp/
 .dvc/config.local
 dvc_remote/
 
-# ── PyCaret leftovers ──────────────────────────────────────────────────────
+# ── PyCaret / AutoML leftovers ────────────────────────────────────────────────
 logs.log
 catboost_info/
 
-# ── Notebook checkpoints ──────────────────────────────────────────────────
+# ── Jupyter notebooks ─────────────────────────────────────────────────────────
 .ipynb_checkpoints/
-/model_features.csv
-/model_target.npy
+*.ipynb
+
+# ── Temporary / misc ──────────────────────────────────────────────────────────
+*.tmp
+*.bak
+*.log
