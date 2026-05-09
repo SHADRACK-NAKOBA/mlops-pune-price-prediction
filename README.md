@@ -596,7 +596,7 @@ dvc repro     # re-run the pipeline → produces identical numbers
 
 ## Contributors
 
-**Shadrack Nakoba**
+**SHADRACK NAKOBA**
 
 ## License
 
