@@ -594,6 +594,10 @@ dvc repro     # re-run the pipeline → produces identical numbers
 
 ---
 
+## Contributors
+
+**Shadrack Nakoba**
+
 ## License
 
 For training and educational use as part of the MLOps course (Module 2). The Pune real estate dataset is proprietary and not included in this repository.
